@@ -15,7 +15,7 @@ PYTHON_INTERPRETER = python
 .PHONY: requirements
 requirements:
 	uv sync
-	
+
 
 
 
@@ -48,15 +48,15 @@ test:
 .PHONY: sync_data_down
 sync_data_down:
 	aws s3 sync s3://mlops/data/ \
-		data/ 
-	
+		data/
+
 
 ## Upload Data to storage system
 .PHONY: sync_data_up
 sync_data_up:
 	aws s3 sync data/ \
-		s3://mlops/data 
-	
+		s3://mlops/data
+
 
 
 
@@ -67,7 +67,7 @@ create_environment:
 	@echo ">>> New uv virtual environment created. Activate with:"
 	@echo ">>> Windows: .\\\\.venv\\\\Scripts\\\\activate"
 	@echo ">>> Unix/macOS: source ./.venv/bin/activate"
-	
+
 
 
 
